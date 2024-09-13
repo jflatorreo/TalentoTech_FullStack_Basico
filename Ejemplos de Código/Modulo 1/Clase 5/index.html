@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Multimedia de Viajes</title>
+    <style>
+        img, video, iframe { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+<h1>Mi Galería Multimedia de Viajes</h1>
+
+<h2>Imágenes de mis viajes</h2>
+<figure>
+    <img src="/api/placeholder/800/600" alt="Vista panorámica de la Torre Eiffel en París"
+         srcset="/api/placeholder/400/300 400w, /api/placeholder/800/600 800w"
+         sizes="(max-width: 600px) 400px, 800px">
+    <figcaption>La majestuosa Torre Eiffel al atardecer</figcaption>
+</figure>
+
+<img src="/api/placeholder/600/400" alt="Playa tropical con palmeras en Bali"
+     srcset="/api/placeholder/300/200 300w, /api/placeholder/600/400 600w"
+     sizes="(max-width: 500px) 300px, 600px">
+
+<h2>Video de mi última aventura</h2>
+<video controls poster="/api/placeholder/640/360" width="640" height="360">
+    <source src="mi-video-aventura.mp4" type="video/mp4">
+    <source src="mi-video-aventura.webm" type="video/webm">
+    Tu navegador no soporta el elemento de video.
+</video>
+
+<h2>Mapa de mis destinos</h2>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.9541511!2d2.277019!3d48.8588377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2zUGFyw61zLCBGcmFuY2lh!5e0!3m2!1ses!2ses!4v1631234567890!5m2!1ses!2ses"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+<h2>Video recomendado sobre viajes</h2>
+<iframe width="560" height="315"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+<h2>Guía de viaje en PDF</h2>
+<embed src="guia-viaje.pdf" type="application/pdf" width="100%" height="600px" />
+
+</body>
+</html>

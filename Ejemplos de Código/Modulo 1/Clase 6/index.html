@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Formularios HTML5</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        form { max-width: 500px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; }
+        label { display: block; margin-top: 10px; }
+        input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; }
+        fieldset { margin-top: 20px; }
+        button { margin-top: 20px; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+<h1>Ejemplos de Formularios HTML5</h1>
+
+<form id="registro" action="/registro" method="post">
+    <h2>Formulario de Registro</h2>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número, una letra mayúscula y minúscula, y al menos 8 caracteres">
+
+    <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+    <fieldset>
+        <legend>Género:</legend>
+        <label>
+            <input type="radio" name="genero" value="masculino" required> Masculino
+        </label>
+        <label>
+            <input type="radio" name="genero" value="femenino"> Femenino
+        </label>
+        <label>
+            <input type="radio" name="genero" value="otro"> Otro
+        </label>
+    </fieldset>
+
+    <button type="submit">Registrarse</button>
+</form>
+
+<form id="pedido" action="/pedido" method="post">
+    <h2>Formulario de Pedido</h2>
+    <label for="producto">Seleccione un producto:</label>
+    <select id="producto" name="producto" required>
+        <option value="">Elija una opción</option>
+        <option value="1">Producto 1</option>
+        <option value="2">Producto 2</option>
+        <option value="3">Producto 3</option>
+    </select>
+
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="cantidad" name="cantidad" min="1" max="10" required>
+
+    <label for="direccion">Dirección de envío:</label>
+    <textarea id="direccion" name="direccion" rows="3" required></textarea>
+
+    <fieldset>
+        <legend>Método de pago:</legend>
+        <label>
+            <input type="radio" name="pago" value="tarjeta" required> Tarjeta de crédito
+        </label>
+        <label>
+            <input type="radio" name="pago" value="paypal"> PayPal
+        </label>
+        <label>
+            <input type="radio" name="pago" value="transferencia"> Transferencia bancaria
+        </label>
+    </fieldset>
+
+    <button type="submit">Realizar Pedido</button>
+</form>
+
+<form id="contacto" action="/contacto" method="post">
+    <h2>Formulario de Contacto</h2>
+    <label for="nombre_contacto">Nombre:</label>
+    <input type="text" id="nombre_contacto" name="nombre_contacto" required>
+
+    <label for="email_contacto">Email:</label>
+    <input type="email" id="email_contacto" name="email_contacto" required>
+
+    <label for="asunto">Asunto:</label>
+    <input type="text" id="asunto" name="asunto" required>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+    <fieldset>
+        <legend>¿Cómo prefiere que le contactemos?</legend>
+        <label>
+            <input type="checkbox" name="contacto_prefer" value="email"> Email
+        </label>
+        <label>
+            <input type="checkbox" name="contacto_prefer" value="telefono"> Teléfono
+        </label>
+    </fieldset>
+
+    <button type="submit">Enviar Mensaje</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de HTML5</title>
+</head>
+<body>
+<header>
+    <h1>Mi Blog de Viajes</h1>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#destinos">Destinos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article>
+        <h2>Mi Viaje a Japón</h2>
+        <section>
+            <h3>Tokyo</h3>
+            <p>Tokyo es una ciudad fascinante que mezcla lo moderno con lo tradicional...</p>
+        </section>
+        <section>
+            <h3>Kyoto</h3>
+            <p>Kyoto, la antigua capital de Japón, está llena de templos y jardines hermosos...</p>
+        </section>
+    </article>
+
+    <aside>
+        <h3>Datos Curiosos</h3>
+        <ul>
+            <li>Japón tiene más de 6,800 islas</li>
+            <li>El Monte Fuji es el punto más alto de Japón</li>
+        </ul>
+    </aside>
+</main>
+
+<footer>
+    <p>&copy; 2024 Mi Blog de Viajes</p>
+</footer>
+
+<h3>Contacto</h3>
+<form>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="fecha">Fecha de viaje:</label>
+    <input type="date" id="fecha" name="fecha">
+
+    <label for="presupuesto">Presupuesto:</label>
+    <input type="range" id="presupuesto" name="presupuesto" min="0" max="10000" step="500">
+
+    <button type="submit">Enviar</button>
+</form>
+
+<h3>Video Promocional</h3>
+<video width="320" height="240" controls>
+    <source src="video-japon.mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+</video>
+</body>
+</html>

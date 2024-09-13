@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Diario Digital - Noticias de Tecnología</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+        header, nav, main, footer { padding: 20px; }
+        header { background: #333; color: white; }
+        nav { background: #444; }
+        nav ul { list-style-type: none; padding: 0; }
+        nav ul li { display: inline; margin-right: 10px; }
+        nav a { color: white; text-decoration: none; }
+        main { display: flex; }
+        article, section { margin-bottom: 20px; }
+        aside { width: 30%; padding-left: 20px; }
+        footer { background: #333; color: white; text-align: center; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>El Diario Digital</h1>
+    <p>Tu fuente de noticias tecnológicas</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#tecnologia">Tecnología</a></li>
+        <li><a href="#ciencia">Ciencia</a></li>
+        <li><a href="#innovacion">Innovación</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="noticias-principales">
+        <h2>Últimas Noticias de Tecnología</h2>
+
+        <article>
+            <header>
+                <h3>Lanzamiento del nuevo smartphone XYZ</h3>
+                <p>Por <span class="author">Ana García</span> -
+                    <time datetime="2024-09-15">15 de septiembre, 2024</time></p>
+            </header>
+            <p>La compañía tecnológica XYZ ha anunciado hoy el lanzamiento de su último smartphone...</p>
+            <figure>
+                <img src="/api/placeholder/400/300" alt="Nuevo smartphone XYZ">
+                <figcaption>El nuevo smartphone XYZ promete revolucionar el mercado</figcaption>
+            </figure>
+        </article>
+
+        <article>
+            <header>
+                <h3>Avances en Inteligencia Artificial</h3>
+                <p>Por <span class="author">Carlos Rodríguez</span> -
+                    <time datetime="2024-09-14">14 de septiembre, 2024</time></p>
+            </header>
+            <p>Un equipo de investigadores ha logrado un avance significativo en el campo de la IA...</p>
+            <blockquote cite="https://ia-research.org">
+                <p>Este descubrimiento podría cambiar la forma en que interactuamos con las máquinas.</p>
+            </blockquote>
+        </article>
+    </section>
+
+    <aside>
+        <section id="noticias-relacionadas">
+            <h3>Noticias Relacionadas</h3>
+            <ul>
+                <li><a href="#">5G: El futuro de las comunicaciones móviles</a></li>
+                <li><a href="#">Ciberseguridad: Protegiendo tus datos en la era digital</a></li>
+            </ul>
+        </section>
+
+        <section id="publicidad">
+            <h3>Publicidad</h3>
+            <p>Espacio reservado para anuncios</p>
+        </section>
+    </aside>
+</main>
+
+<footer>
+    <p>&copy; 2024 El Diario Digital. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
