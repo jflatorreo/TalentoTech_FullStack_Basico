@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Validación</title>
+    <style>
+        .error {
+            color: red;
+            display: none;
+        }
+        input:invalid {
+            border: 2px solid red;
+        }
+        input:valid {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+
+<form id="miFormulario">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required placeholder="Ingresa tu nombre">
+    <span class="error" id="errorNombre">Por favor, ingresa tu nombre.</span>
+    
+    <br><br>
+    
+    <label for="email">Correo Electrónico:</label>
+    <input type="email" id="email" required placeholder="Ingresa tu correo">
+    <span class="error" id="errorEmail">Por favor, ingresa un correo electrónico válido.</span>
+    
+    <br><br>
+    
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" required placeholder="Ingresa tu teléfono" pattern="[0-9]{10}">
+    <span class="error" id="errorTelefono">El teléfono debe tener 10 dígitos.</span>
+    
+    <br><br>
+    
+    <input type="submit" value="Enviar">
+</form>
+
+<script>
+    document.getElementById('miFormulario').addEventListener('submit', function(event) {
+        let hasError = false;
+
+        // Limpiar mensajes de error
+        document.querySelectorAll('.error').forEach(span => {
+            span.style.display = 'none';
+        });
+
+        // Validar nombre
+        const nombre = document.getElementById('nombre').value;
+        if (!nombre) {
+            document.getElementById('errorNombre').style.display = 'inline';
+            hasError = true;
+        }
+
+        // Validar email
+        const email = document.getElementById('email').value;
+        const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+        if (!emailPattern.test(email)) {
+            document.getElementById('errorEmail').style.display = 'inline';
+            hasError = true;
+        }
+
+        // Validar teléfono
+        const telefono = document.getElementById('telefono').value;
+        const telefonoPattern = /^[0-9]{10}$/; // Debe ser un número de 10 dígitos
+        if (!telefonoPattern.test(telefono)) {
+            document.getElementById('errorTelefono').style.display = 'inline';
+            hasError = true;
+        }
+
+        if (hasError) {
+            event.preventDefault(); // Evitar el envío del formulario
+        }
+    });
+</script>
+
+</body>
+</html>
