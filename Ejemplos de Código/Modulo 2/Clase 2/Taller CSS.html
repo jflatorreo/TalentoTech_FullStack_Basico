@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Selectores Básicos</title>
+    <style>
+        /* Agrega tus estilos aquí */
+        * {
+            color: #333; /* Cambia el color del texto de todos los elementos a #333 */
+        }
+
+        #contenedor {
+            background-color: #f0f0f0; /* Establece el color de fondo del elemento con id "contenedor" a #f0f0f0 */
+        }
+
+        .destacado {
+            font-weight: bold; /* Hace que el texto de la clase "destacado" sea negrita */
+            color: blue; /* Cambia el color a azul */
+        }
+
+        h1 {
+            font-size: 24px; /* Aumenta el tamaño de fuente del h1 a 24px */
+        }
+
+        /* Punto 2.3 */
+        [class] {
+            color: #e74c3c; /* Cambia el color del texto a rojo para todos los elementos con class */
+        }
+
+        /* Ejercicio 3 */
+        .caja {
+            width: 200px; /* Ancho de 200px */
+            height: 200px; /* Alto de 200px */
+            border: solid 2px #333; /* Borde sólido de 2px */
+            padding: 20px; /* Relleno de 20px */
+            margin: 10px; /* Margen de 10px */
+            background-color: rgba(255, 0, 0, 0.5); /* Color de fondo usando rgba() */
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra de caja */
+            border-radius: 10px; /* Borde redondeado de 10px */
+        }
+    </style>
+</head>
+<body>
+    <h1>Título Principal</h1>
+    <p class="destacado">Párrafo destacado</p>
+    <p>Párrafo normal</p>
+    <div id="contenedor">
+        <p>Párrafo dentro de un div</p>
+    </div>
+    <ul>
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+        <li>Tercer elemento</li>
+    </ul>
+    <p><span>Texto</span> con <span>múltiples</span> spans</p>
+
+    <!-- Ejercicio 3: Nuevo div con clase "caja" -->
+    <div class="caja"></div>
+</body>
+</html>
