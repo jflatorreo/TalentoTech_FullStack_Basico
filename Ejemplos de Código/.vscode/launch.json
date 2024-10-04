@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open fontawesome.html",
+            "file": "c:\\Users\\Usuario\\Downloads\\fontawesome-free-6.6.0-web\\fontawesome-free-6.6.0-web\\css\\fontawesome.html"
+        }
+    ]
+}
