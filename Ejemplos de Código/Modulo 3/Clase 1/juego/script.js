@@ -1,4 +1,4 @@
-// Array de desafíos de programación con pseudo-código
+// Array de desafíos de programación con pseudo-código// Array de desafíos de programación con pseudo-código
 const challenges = [
     {
         description: `Algoritmo SumaDosNumeros
@@ -68,8 +68,7 @@ const challenges = [
 if (x % 3 === 0) {
     console.log("Divisible por 3");
 } else {
-    console.log("No es divisible por 3");
-}`,
+    console.log("No es divisible por 3");}`,
         question: '¿Qué valor será impreso en la consola?',
         correctAnswer: "Divisible por 3"
     },
@@ -99,6 +98,331 @@ for (let i = 1; i <= 5; i++) {
 console.log(z);`,
         question: '¿Cuál será el valor impreso de "z"?',
         correctAnswer: "15"
+    },
+    {
+        description: `Algoritmo DividirNumeros
+    a ← 20
+    b ← 4
+    division ← a / b
+    Imprimir division`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "5"
+    },
+    {
+        description: `Algoritmo SumarHastaN
+    n ← 5
+    suma ← 0
+    Para i ← 1 Hasta n Hacer
+        suma ← suma + i
+    FinPara
+    Imprimir suma`,
+        question: '¿Cuál es el valor impreso?',
+        correctAnswer: "15"
+    },
+    {
+        description: `Algoritmo RestarDosNumeros
+    a ← 15
+    b ← 6
+    resta ← a - b
+    Imprimir resta`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "9"
+    },
+    {
+        description: `function multiplicar(a, b) {
+    return a * b;
+}
+console.log(multiplicar(3, 4));`,
+        question: '¿Qué valor será impreso en la consola?',
+        correctAnswer: "12"
+    },
+    {
+        description: `Algoritmo DeterminarSiPar
+    n ← 8
+    Si (n mod 2 = 0) Entonces
+        Imprimir "Es par"
+    SiNo
+        Imprimir "Es impar"
+    FinSi`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "Es par"
+    },
+    {
+        description: `let contador = 1;
+while (contador <= 3) {
+    console.log(contador);
+    contador++;
+}`,
+        question: '¿Cuál es el último valor impreso?',
+        correctAnswer: "3"
+    },
+    {
+        description: `let num = 10;
+if (num > 5) {
+    console.log("Mayor que 5");
+} else {
+    console.log("Menor o igual a 5");
+}`,
+        question: '¿Qué mensaje se imprimirá?',
+        correctAnswer: "Mayor que 5"
+    },
+    {
+        description: `let n = 3;
+let suma = 0;
+for (let i = 1; i <= n; i++) {
+    suma = suma + i;
+}
+console.log(suma);`,
+        question: '¿Cuál es el valor final de "suma"?',
+        correctAnswer: "6"
+    },
+    {
+        description: `Algoritmo CalcularCuadrado
+    a ← 4
+    cuadrado ← a * a
+    Imprimir cuadrado`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "16"
+    },
+    {
+        description: `Algoritmo CalcularPromedio
+    n1 ← 8
+    n2 ← 6
+    promedio ← (n1 + n2) / 2
+    Imprimir promedio`,
+        question: '¿Cuál es el valor del promedio?',
+        correctAnswer: "7"
+    },
+    {
+        description: `function restar(a, b) {
+    return a - b;
+}
+console.log(restar(10, 3));`,
+        question: '¿Qué valor será impreso en la consola?',
+        correctAnswer: "7"
+    },
+    {
+        description: `Algoritmo ImprimirMultiplos
+    n ← 5
+    Para i ← 1 Hasta 5 Hacer
+        Imprimir n * i
+    FinPara`,
+        question: '¿Qué valores se imprimirán?',
+        correctAnswer: "5, 10, 15, 20, 25"
+    },
+    {
+        description: `let n = 5;
+for (let i = 1; i <= 10; i++) {
+    console.log(n * i);
+}`,
+        question: '¿Cuál es el último valor impreso?',
+        correctAnswer: "50"
+    },
+    {
+        description: `Algoritmo CalcularResta
+    a ← 15
+    b ← 9
+    resta ← a - b
+    Imprimir resta`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "6"
+    },
+    {
+        description: `let x = 8;
+if (x > 10) {
+    console.log("Mayor que 10");
+} else {
+    console.log("Menor o igual a 10");
+}`,
+        question: '¿Qué valor será impreso en la consola?',
+        correctAnswer: "Menor o igual a 10"
+    },
+    {
+        description: `function calcular(a, b, c) {
+    return (a + b + c) / 3;
+}
+console.log(calcular(6, 9, 12));`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "9"
+    },
+    {
+        description: `Algoritmo MultiplicarTresNumeros
+    a ← 2
+    b ← 3
+    c ← 4
+    multiplicacion ← a * b * c
+    Imprimir multiplicacion`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "24"
+    },
+    {
+        description: `let x = 3;
+let y = 4;
+let z = x + y;
+console.log(z);`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "7"
+    },
+    {
+        description: `let x = 7;
+let y = 2;
+console.log(x % y);`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "1"
+    },
+    {
+        description: `Algoritmo CalcularProducto
+    a ← 5
+    b ← 6
+    producto ← a * b
+    Imprimir producto`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "30"
+    },
+    {
+        description: `let num = 12;
+if (num % 2 === 0) {
+    console.log("Es par");
+} else {
+    console.log("Es impar");
+}`,
+        question: '¿Qué se imprimirá en la consola?',
+        correctAnswer: "Es par"
+    },
+    {
+        description: `function doble(n) {
+    return n * 2;
+}
+console.log(doble(5));`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "10"
+    },
+    {
+        description: `let contador = 1;
+while (contador < 4) {
+    console.log(contador);
+    contador++;
+}`,
+        question: '¿Cuál es el último valor impreso?',
+        correctAnswer: "3"
+    },
+    {
+        description: `Algoritmo SumarLista
+    lista ← [2, 4, 6, 8]
+    suma ← 0
+    Para i En lista Hacer
+        suma ← suma + i
+    FinPara
+    Imprimir suma`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "20"
+    },
+    {
+        description: `let num = 25;
+if (num > 20) {
+    console.log("Mayor que 20");
+} else {
+    console.log("Menor o igual a 20");
+}`,
+        question: '¿Qué mensaje se imprimirá?',
+        correctAnswer: "Mayor que 20"
+    },
+    {
+        description: `Algoritmo RestaDiez
+    n ← 10
+    resultado ← n - 3
+    Imprimir resultado`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "7"
+    },
+    {
+        description: `let x = 100;
+while (x >= 50) {
+    console.log(x);
+    x = x - 10;
+}`,
+        question: '¿Cuál será el primer valor impreso?',
+        correctAnswer: "100"
+    },
+    {
+        description: `Algoritmo SumarMultiplosDeTres
+    suma ← 0
+    Para i ← 1 Hasta 9 Hacer
+        Si (i mod 3 = 0) Entonces
+            suma ← suma + i
+        FinSi
+    FinPara
+    Imprimir suma`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "18"
+    },
+    {
+        description: `let x = 5;
+for (let i = 1; i <= 4; i++) {
+    x = x + i;
+}
+console.log(x);`,
+        question: '¿Qué valor será impreso en la consola?',
+        correctAnswer: "15"
+    },
+    {
+        description: `Algoritmo DeterminarMayor
+    a ← 12
+    b ← 20
+    Si (a > b) Entonces
+        Imprimir a
+    SiNo
+        Imprimir b
+    FinSi`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "20"
+    },
+    {
+        description: `let numero = 30;
+if (numero > 25) {
+    console.log("Mayor que 25");
+} else {
+    console.log("Menor o igual a 25");
+}`,
+        question: '¿Qué valor se imprimirá en la consola?',
+        correctAnswer: "Mayor que 25"
+    },
+    {
+        description: `Algoritmo CalcularCubo
+    a ← 3
+    cubo ← a * a * a
+    Imprimir cubo`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "27"
+    },
+    {
+        description: `let contador = 0;
+for (let i = 1; i <= 10; i++) {
+    if (i % 2 === 0) {
+        contador = contador + i;
+    }
+}
+console.log(contador);`,
+        question: '¿Cuál es el valor final de "contador"?',
+        correctAnswer: "30"
+    },
+    {
+        description: `Algoritmo CalcularSumaDiez
+    suma ← 0
+    Para i ← 1 Hasta 10 Hacer
+        suma ← suma + i
+    FinPara
+    Imprimir suma`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "55"
+    },
+    {
+        description: `function multiplicarTresNumeros(a, b, c) {
+    return a * b * c;
+}
+console.log(multiplicarTresNumeros(2, 3, 4));`,
+        question: '¿Qué valor será impreso?',
+        correctAnswer: "24"
     }
 ];
 
@@ -108,14 +432,20 @@ const secretPhrases = [
     "Programar es pensar en soluciones",
     "La lógica es la base del código",
     "Algoritmos resuelven problemas complejos",
-    "Depurar es parte del proceso creativo"
+    "Depurar es parte del proceso creativo",
+    "La clave está en los detalles del código",
+    "Todo error es una oportunidad de aprendizaje",
+    "Una línea de código puede hacer la diferencia",
+    "La programación es un arte de precisión",
+    "Piensa en algoritmos, no en lenguaje",
+    "El código siempre puede mejorarse"
 ];
 
 let players = [];
 let currentPlayerIndex = 0;
 let currentChallenge = 0;
 let timer;
-let timeLeft = 15;
+let timeLeft = 20;
 
 // Elementos del DOM
 const registrationScreen = document.getElementById('registration-screen');
@@ -151,7 +481,7 @@ const restartGameBtn = document.getElementById('restart-game-btn');
 // Funciones de registro de jugadores
 function addPlayer() {
     const playerName = playerNameInput.value.trim();
-    if (playerName && players.length < 4) {
+    if (playerName && players.length < 10) {
         players.push({ name: playerName, score: 0, hints: [] });
         updatePlayerList();
         playerNameInput.value = '';
@@ -186,11 +516,11 @@ function displayChallenge() {
 
 function updateHint() {
     const currentPlayer = players[currentPlayerIndex];
-    hintEl.innerHTML = `Pista actual: ${currentPlayer.hints.join(" ")}`;
+    hintEl.innerHTML = `Pista actual: ${currentPlayer.hints[currentPlayer.hints.length-1]}`;
 }
 
 function startTimer() {
-    timeLeft = 15;
+    timeLeft = 20;
     updateTimerDisplay();
     timer = setInterval(() => {
         timeLeft--;
