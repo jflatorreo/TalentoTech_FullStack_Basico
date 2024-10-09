@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Navbar con Scroll</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 200vh; /* Altura para permitir scroll */
+        }
+
+        .nav {
+            background-color: transparent;
+            position: fixed; /* Fijo para que se mantenga en la parte superior */
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            transition: background-color 0.3s ease; /* Transición suave para el fondo */
+            z-index: 1000; /* Asegura que la nav esté por encima de otros elementos */
+        }
+
+        .nav.scrolled {
+            background-color: #333; /* Fondo oscuro al hacer scroll */
+            color: white; /* Cambia el color del texto */
+            padding: 10px 0;
+        }
+
+        .nav a {
+            color: inherit; /* Hereda el color del texto */
+            text-decoration: none; /* Sin subrayado en los enlaces */
+            padding: 10px 15px;
+        }
+
+        .section {
+            padding: 100px; /* Espacio interior para el contenido */
+            text-align: center;
+        }
+
+        .section:nth-child(even) {
+            background-color: #f4f4f4; /* Color de fondo alterno para secciones */
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav" id="navbar">
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Acerca de</a>
+    <a href="#">Contacto</a>
+</div>
+
+<div class="section">
+    <h1>Bienvenido a Mi Página</h1>
+    <p>Desplázate hacia abajo para ver el efecto de la barra de navegación.</p>
+</div>
+
+<div class="section">
+    <h2>Sección 1</h2>
+    <p>Contenido de la sección 1.</p>
+</div>
+
+<div class="section">
+    <h2>Sección 2</h2>
+    <p>Contenido de la sección 2.</p>
+</div>
+
+<div class="section">
+    <h2>Sección 3</h2>
+    <p>Contenido de la sección 3.</p>
+</div>
+
+<script>
+    window.addEventListener("scroll", function() {
+        var nav = document.getElementById("navbar");
+        if (window.scrollY > 50) { // Cambia el fondo después de 50px de desplazamiento
+            nav.classList.add("scrolled");
+        } else {
+            nav.classList.remove("scrolled");
+        }
+    });
+</script>
+
+</body>
+</html>

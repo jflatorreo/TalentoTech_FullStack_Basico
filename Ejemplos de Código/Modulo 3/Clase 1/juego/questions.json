@@ -1,0 +1,101 @@
+
+  {
+    description: `Algoritmo SumaDosNumeros
+    a ← 3
+    b ← 5
+    suma ← a + b
+    Imprimir suma`,
+    question: '¿Qué valor será impreso?',
+    correctAnswer: "8"
+  },
+  {
+    description: `Algoritmo EncontrarMayor
+    a ← 7
+    b ← 10
+    Si (a > b) Entonces
+    mayor ← a
+    SiNo
+    mayor ← b
+    FinSi
+    Imprimir mayor`,
+    question: '¿Qué valor será impreso?',
+    correctAnswer: "10"
+  },
+  {
+    description: `Algoritmo ContarHastaCinco
+    contador ← 1
+    Mientras (contador <= 5) Hacer
+    Imprimir contador
+    contador ← contador + 1
+    FinMientras`,
+    question: '¿Cuál será el último valor impreso?',
+    correctAnswer: "5"
+  },
+  {
+    description: `Algoritmo CalcularFactorial
+    n ← 4
+    factorial ← 1
+    Para i ← 1 Hasta n Hacer
+    factorial ← factorial * i
+    FinPara
+    Imprimir factorial`,
+    question: '¿Cuál será el valor impreso?',
+    correctAnswer: "24"
+  },
+  {
+    description: `Algoritmo MultiplicarDosNumeros
+    a ← 6
+    b ← 7
+    multiplicacion ← a * b
+    Imprimir multiplicacion`,
+    question: '¿Qué valor será impreso?',
+    correctAnswer: "42"
+  },
+  {
+    description: `Algoritmo VerificarParidad
+    n ← 9
+    Si (n mod 2 = 0) Entonces
+    Imprimir "Es par"
+    SiNo
+    Imprimir "Es impar"
+    FinSi`,
+    question: '¿Qué se imprimirá?',
+    correctAnswer: "Es impar"
+  },
+  {
+    description: `let x = 12;
+    if (x % 3 === 0) {
+    console.log("Divisible por 3");
+  } else {
+    console.log("No es divisible por 3");
+  }`,
+  question: '¿Qué valor será impreso en la consola?',
+  correctAnswer: "Divisible por 3"
+  },
+  {
+    description: `let y = 5;
+    for (let i = 1; i <= 3; i++) {
+    y = y + i;
+  }
+  console.log(y);`,
+  question: '¿Cuál es el valor final de "y"?',
+  correctAnswer: "11"
+  },
+  {
+    description: `function suma(a, b) {
+    return a + b;
+  }
+  let resultado = suma(2, 6);
+  console.log(resultado);`,
+  question: '¿Qué valor será impreso en la consola?',
+  correctAnswer: "8"
+  },
+  {
+    description: `let z = 0;
+    for (let i = 1; i <= 5; i++) {
+    z = z + i;
+  }
+  console.log(z);`,
+  question: '¿Cuál será el valor impreso de "z"?',
+  correctAnswer: "15"
+  }

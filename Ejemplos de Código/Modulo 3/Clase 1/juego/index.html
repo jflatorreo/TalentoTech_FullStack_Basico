@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Lógica de Programación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="registration-screen" class="screen">
+    <h1>Registro de Jugadores</h1>
+    <input type="text" id="player-name" placeholder="Nombre del jugador">
+    <button id="add-player-btn">Agregar Jugador</button>
+    <ul id="player-list"></ul>
+    <button id="start-game-btn" disabled>Iniciar Juego</button>
+</div>
+
+<div id="game-screen" class="screen" style="display:none;">
+    <div class="game-container">
+        <h1>Resuelve el Desafío de Programación</h1>
+        <p id="current-player"></p>
+        <p id="timer">Tiempo restante: 15s</p>
+        <p id="description">Resuelve este desafío de lógica de programación:</p>
+        <pre id="challenge"><code></code></pre>
+        <input type="text" id="answer" placeholder="Escribe tu respuesta aquí">
+        <button id="submit-btn">Enviar Respuesta</button>
+        <p id="message"></p>
+        <button id="next-btn" style="display:none;">Siguiente Desafío</button>
+        <div id="hint" class="hint">Pista actual: _ _ _ _ _ _ _ _ _ _ _ _ _</div>
+        <div id="scores"></div>
+    </div>
+</div>
+
+<div id="phrase-guess-screen" class="screen" style="display:none;">
+    <h1>¡Adivina tu frase secreta!</h1>
+    <p id="guess-player"></p>
+    <div id="final-hint" class="hint"></div>
+    <input type="text" id="phrase-guess" placeholder="Escribe tu frase aquí">
+    <button id="guess-phrase-btn">Adivinar frase</button>
+    <p id="final-message"></p>
+    <button id="next-player-guess-btn" style="display:none;">Siguiente Jugador</button>
+</div>
+
+<div id="final-scores-screen" class="screen" style="display:none;">
+    <h1>Puntuaciones Finales</h1>
+    <div id="final-scores"></div>
+    <button id="restart-game-btn">Reiniciar Juego</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
