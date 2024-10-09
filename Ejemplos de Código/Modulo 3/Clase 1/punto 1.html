@@ -13,7 +13,7 @@
         }
 
         .nav {
-            background-color: transparent;
+            background-color: green;
             position: fixed; /* Fijo para que se mantenga en la parte superior */
             top: 0;
             left: 0;
@@ -24,9 +24,10 @@
         }
 
         .nav.scrolled {
-            background-color: #333; /* Fondo oscuro al hacer scroll */
+            background-color: #ff0000; /* Fondo oscuro al hacer scroll */
             color: white; /* Cambia el color del texto */
-            padding: 10px 0;
+            padding: 10px 20px;
+            height: 40px;
         }
 
         .nav a {
@@ -77,7 +78,7 @@
 <script>
     window.addEventListener("scroll", function() {
         var nav = document.getElementById("navbar");
-        if (window.scrollY > 50) { // Cambia el fondo después de 50px de desplazamiento
+        if (window.scrollY > 150) { // Cambia el fondo después de 50px de desplazamiento
             nav.classList.add("scrolled");
         } else {
             nav.classList.remove("scrolled");
