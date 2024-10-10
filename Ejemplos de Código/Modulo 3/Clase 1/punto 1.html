@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo de Navbar con Scroll</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -75,16 +76,7 @@
     <p>Contenido de la sección 3.</p>
 </div>
 
-<script>
-    window.addEventListener("scroll", function() {
-        var nav = document.getElementById("navbar");
-        if (window.scrollY > 150) { // Cambia el fondo después de 50px de desplazamiento
-            nav.classList.add("scrolled");
-        } else {
-            nav.classList.remove("scrolled");
-        }
-    });
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
