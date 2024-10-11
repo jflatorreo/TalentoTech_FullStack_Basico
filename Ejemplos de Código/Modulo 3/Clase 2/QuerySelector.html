@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo</title>
+</head>
+<body>
+<div class="mi-clase">Elemento 1</div>
+<div class="mi-clase">Elemento 2</div>
+<div class="mi-clase">Elemento 3</div>
+
+<button id="agregar">Agregar Elemento</button>
+
+<script>
+    const elementos = document.querySelectorAll('.mi-clase');
+    console.log('Antes de agregar:', elementos.length); // Salida: 3
+
+    document.getElementById('agregar').addEventListener('click', () => {
+        const nuevoDiv = document.createElement('div');
+        nuevoDiv.className = 'mi-clase';
+        nuevoDiv.textContent = 'Elemento 4';
+        document.body.appendChild(nuevoDiv);
+
+        console.log('Después de agregar:', elementos.length); // Salida: 3
+    });
+</script>
+</body>
+</html>
