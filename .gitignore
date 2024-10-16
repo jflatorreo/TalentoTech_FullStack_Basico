@@ -130,3 +130,4 @@ dist
 .pnp.*
 *.iml
 /Ejemplos de Código/.idea
+/Ejemplos de Código/.vscode
