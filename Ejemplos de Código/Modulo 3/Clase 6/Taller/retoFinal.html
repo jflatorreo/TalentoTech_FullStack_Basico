@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Social de Desarrolladores</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .card { border: 1px solid #ccc; padding: 20px; margin: 10px; border-radius: 8px; }
+        .like-btn { background-color: #4CAF50; color: white; border: none; padding: 10px; cursor: pointer; }
+        .like-btn:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+
+<h1>Mini Red Social de Desarrolladores</h1>
+
+<h2>Crear Perfil de Desarrollador</h2>
+<form id="perfil-form">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" required><br><br>
+    <label for="lenguajes">Lenguajes Favoritos (separados por comas):</label>
+    <input type="text" id="lenguajes" name="lenguajes" required><br><br>
+    <label for="proyectos">Proyectos (nombre - descripción separados por punto y coma):</label>
+    <input type="text" id="proyectos" name="proyectos" required><br><br>
+    <button type="submit">Crear Perfil</button>
+</form>
+
+<h2>Galería de Perfiles</h2>
+<div id="galeria-perfiles"></div>
+
+<script>
+    document.getElementById('perfil-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const nombre = document.getElementById('nombre').value;
+        const edad = document.getElementById('edad').value;
+        const lenguajes = document.getElementById('lenguajes').value.split(',');
+        const proyectos = document.getElementById('proyectos').value.split(';').map(p => {
+            const [nombre, descripcion] = p.split('-');
+            return { nombre: nombre.trim(), descripcion: descripcion.trim() };
+        });
+        const perfil = { nombre, edad, lenguajes, proyectos, likes: 0 };
+
+        let perfiles = JSON.parse(localStorage.getItem('perfiles')) || [];
+        perfiles.push(perfil);
+        localStorage.setItem('perfiles', JSON.stringify(perfiles));
+
+        mostrarPerfiles();
+    });
+
+    function mostrarPerfiles() {
+        const galeria = document.getElementById('galeria-perfiles');
+        galeria.innerHTML = '';  // Limpiar la galería
+
+        const perfiles = JSON.parse(localStorage.getItem('perfiles')) || [];
+        perfiles.forEach((perfil, index) => {
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            const nombre = document.createElement('h3');
+            nombre.textContent = `Nombre: ${perfil.nombre}`;
+
+            const edad = document.createElement('p');
+            edad.textContent = `Edad: ${perfil.edad}`;
+
+            const lenguajes = document.createElement('p');
+            lenguajes.textContent = `Lenguajes Favoritos: ${perfil.lenguajes.join(', ')}`;
+
+            const proyectos = document.createElement('ul');
+            perfil.proyectos.forEach(p => {
+                const proyecto = document.createElement('li');
+                proyecto.textContent = `${p.nombre} - ${p.descripcion}`;
+                proyectos.appendChild(proyecto);
+            });
+
+            const likeBtn = document.createElement('button');
+            likeBtn.className = 'like-btn';
+            likeBtn.textContent = `Likes: ${perfil.likes}`;
+            likeBtn.addEventListener('click', function() {
+                perfiles[index].likes += 1;
+                localStorage.setItem('perfiles', JSON.stringify(perfiles));
+                mostrarPerfiles();  // Actualizar la galería
+            });
+
+            card.appendChild(nombre);
+            card.appendChild(edad);
+            card.appendChild(lenguajes);
+            card.appendChild(proyectos);
+            card.appendChild(likeBtn);
+            galeria.appendChild(card);
+        });
+    }
+
+    // Mostrar los perfiles al cargar la página
+    mostrarPerfiles();
+</script>
+</body>
+</html>
