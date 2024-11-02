@@ -1,0 +1,17 @@
+{
+  "name": "proyectonode",
+  "version": "1.0.0",
+  "description": "Mi proyecto de Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd micaperta",
+    "dev": "",
+    "build": "",
+    "start": "node index.js"
+  },
+  "author": "JL",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.15.1"
+  }
+}
